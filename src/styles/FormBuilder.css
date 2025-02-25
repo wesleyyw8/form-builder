@@ -1,0 +1,325 @@
+.form-builder {
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.form-header {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.form-name-input {
+  flex: 1;
+  padding: 0.5rem;
+  font-size: 1.1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.add-field-btn {
+  padding: 0.5rem 1rem;
+  background: #2c5282;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.fields-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.field-item {
+  border: 1px solid #ddd;
+  padding: 1rem;
+  border-radius: 4px;
+}
+
+.field-header {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.field-name-input {
+  flex: 1;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.field-type-select {
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.remove-btn {
+  padding: 0.5rem 1rem;
+  background: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.options-container {
+  margin-top: 1rem;
+  padding-left: 1rem;
+  border-left: 2px solid #ddd;
+}
+
+.add-option-btn {
+  padding: 0.25rem 0.5rem;
+  background: #4a5568;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 0.5rem;
+}
+
+.option-item {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.option-input {
+  flex: 1;
+  padding: 0.25rem 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.remove-option-btn {
+  padding: 0.25rem 0.5rem;
+  background: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.save-form-btn {
+  margin-top: 2rem;
+  padding: 0.75rem 1.5rem;
+  background: #2c5282;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.saved-forms {
+  margin-top: 3rem;
+  border-top: 2px solid #ddd;
+  padding-top: 2rem;
+  background-color: #f8f9fa;
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+.saved-forms h2 {
+  margin-bottom: 1.5rem;
+  color: #2c5282;
+}
+
+.saved-form {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.saved-form h3 {
+  color: #2d3748;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #edf2f7;
+}
+
+.saved-fields {
+  margin-top: 1rem;
+}
+
+.saved-field {
+  margin-bottom: 0.5rem;
+}
+
+.saved-options {
+  font-size: 0.9rem;
+  color: #666;
+  margin-left: 1rem;
+}
+
+@media (max-width: 768px) {
+  .field-header {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .form-header {
+    flex-direction: column;
+  }
+}
+
+.cancel-btn {
+  padding: 0.5rem 1rem;
+  background: #718096;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.cancel-btn:hover {
+  background: #4a5568;
+}
+
+.edit-form-btn {
+  padding: 0.5rem 1rem;
+  background: #2c5282;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.edit-form-btn:hover {
+  background: #2a4365;
+}
+
+.saved-form-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.form-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+.forms-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.forms-table th,
+.forms-table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.forms-table th {
+  background: #f7fafc;
+  font-weight: 600;
+  color: #2d3748;
+}
+
+.forms-table tr:hover {
+  background: #f8fafc;
+}
+
+.field-count {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.view-fields-btn {
+  padding: 0.25rem 0.5rem;
+  background: #4a5568;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.875rem;
+}
+
+.fields-preview {
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  background: #f7fafc;
+  border-radius: 4px;
+  font-size: 0.875rem;
+}
+
+.field-preview {
+  padding: 0.25rem 0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.field-preview:last-child {
+  border-bottom: none;
+}
+
+.field-name {
+  font-weight: 500;
+  margin-right: 0.5rem;
+}
+
+.field-type {
+  color: #718096;
+}
+
+.field-options {
+  margin-top: 0.25rem;
+  color: #718096;
+  font-size: 0.875rem;
+  padding-left: 1rem;
+}
+
+.table-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.delete-form-btn {
+  padding: 0.5rem 1rem;
+  background: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.delete-form-btn:hover {
+  background: #c82333;
+}
+
+@media (max-width: 768px) {
+  .forms-table {
+    font-size: 0.875rem;
+  }
+
+  .forms-table th,
+  .forms-table td {
+    padding: 0.75rem;
+  }
+
+  .table-actions {
+    flex-direction: column;
+  }
+
+  .table-actions button {
+    width: 100%;
+  }
+} 
