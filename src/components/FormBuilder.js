@@ -1,19 +1,39 @@
 import { useState, useEffect } from 'react';
 import '../styles/FormBuilder.css';
 
+// Types
+/*
+type Field = {
+  id: number,
+  name: string,
+  type: 'text' | 'select',
+  options: Array<{ id: number, value: string }>
+}
+
+type Form = {
+  name: string,
+  fields: Field[]
+}
+*/
+
 function FormBuilder() {
+  // State types
+  /** @type {Array<Form>} */
   const [forms, setForms] = useState(() => {
     const savedForms = localStorage.getItem('formBuilder');
     console.log('Loading saved forms:', savedForms); // Debug log
     return savedForms ? JSON.parse(savedForms) : [];
   });
   
+  /** @type {Form} */
   const [currentForm, setCurrentForm] = useState({
     name: '',
     fields: []
   });
 
+  /** @type {number | null} */
   const [editingFormIndex, setEditingFormIndex] = useState(null);
+  /** @type {number | null} */
   const [expandedForm, setExpandedForm] = useState(null);
 
   useEffect(() => {
@@ -32,6 +52,10 @@ function FormBuilder() {
     }));
   };
 
+  /**
+   * @param {number} fieldId
+   * @param {{ name?: string, type?: 'text' | 'select' }} updates
+   */
   const updateField = (fieldId, updates) => {
     setCurrentForm(prev => ({
       ...prev,
@@ -41,6 +65,9 @@ function FormBuilder() {
     }));
   };
 
+  /**
+   * @param {number} fieldId
+   */
   const removeField = (fieldId) => {
     setCurrentForm(prev => ({
       ...prev,
@@ -48,6 +75,9 @@ function FormBuilder() {
     }));
   };
 
+  /**
+   * @param {number} fieldId
+   */
   const addOption = (fieldId) => {
     setCurrentForm(prev => ({
       ...prev,
@@ -59,6 +89,11 @@ function FormBuilder() {
     }));
   };
 
+  /**
+   * @param {number} fieldId
+   * @param {number} optionId
+   * @param {string} value
+   */
   const updateOption = (fieldId, optionId, value) => {
     setCurrentForm(prev => ({
       ...prev,
@@ -75,6 +110,10 @@ function FormBuilder() {
     }));
   };
 
+  /**
+   * @param {number} fieldId
+   * @param {number} optionId
+   */
   const removeOption = (fieldId, optionId) => {
     setCurrentForm(prev => ({
       ...prev,
@@ -114,6 +153,9 @@ function FormBuilder() {
     setEditingFormIndex(null);
   };
 
+  /**
+   * @param {number} index
+   */
   const editForm = (index) => {
     setCurrentForm(forms[index]);
     setEditingFormIndex(index);
